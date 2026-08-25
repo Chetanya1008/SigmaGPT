@@ -1,0 +1,173 @@
+.message {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.message-user {
+  justify-content: flex-end;
+}
+
+.message-assistant {
+  justify-content: flex-start;
+}
+
+.message-avatar {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.message-content {
+  max-width: 85%;
+  min-width: 0;
+}
+
+.message-content-user {
+  background: #1f1f2e;
+  border: 1px solid #2a2a3e;
+  padding: 0.75rem 1rem;
+  border-radius: 16px 16px 4px 16px;
+}
+
+.message-content-assistant {
+  padding: 0.25rem 0;
+}
+
+.message-text {
+  color: #e8e8e8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.message-markdown {
+  color: #d4d4d4;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.message-markdown p {
+  margin: 0 0 0.75rem;
+}
+
+.message-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.message-markdown h1,
+.message-markdown h2,
+.message-markdown h3,
+.message-markdown h4 {
+  color: #f0f0f0;
+  margin: 1.25rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.message-markdown h1 { font-size: 1.3rem; }
+.message-markdown h2 { font-size: 1.15rem; }
+.message-markdown h3 { font-size: 1.05rem; }
+
+.message-markdown ul,
+.message-markdown ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.message-markdown li {
+  margin: 0.3rem 0;
+}
+
+.message-markdown strong {
+  color: #f0f0f0;
+  font-weight: 600;
+}
+
+.message-markdown a {
+  color: #818cf8;
+  text-decoration: none;
+}
+
+.message-markdown a:hover {
+  text-decoration: underline;
+}
+
+.message-markdown blockquote {
+  border-left: 3px solid #6366f1;
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+  color: #999;
+}
+
+.message-markdown table {
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  width: 100%;
+}
+
+.message-markdown th,
+.message-markdown td {
+  border: 1px solid #333;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.message-markdown th {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  font-weight: 600;
+}
+
+.message-markdown hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 1rem 0;
+}
+
+.inline-code {
+  background: #1a1a1a;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #e06c75;
+  font-family: "Fira Code", "Cascadia Code", monospace;
+}
+
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 90%;
+  }
+}
+
+.message-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.attachment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 6px;
+  font-size: 0.72rem;
+  color: #a5b4fc;
+}
+
+.attachment-badge-icon {
+  font-size: 0.8rem;
+}
+
+.attachment-badge-name {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,251 @@
+.chat-input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1rem 1rem;
+  background: linear-gradient(to top, #0f0f0f 40%, transparent);
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 768px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.chat-input-container:focus-within {
+  border-color: #6366f1;
+}
+
+.chat-textarea {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 0.92rem;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  min-height: 24px;
+  max-height: 200px;
+  padding: 0.25rem 0;
+}
+
+.chat-textarea::placeholder {
+  color: #555;
+}
+
+.chat-textarea:disabled {
+  opacity: 0.6;
+}
+
+.send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.send-btn:hover:not(.send-btn-disabled) {
+  background: #5558e6;
+  transform: scale(1.05);
+}
+
+.send-btn-disabled {
+  background: #333;
+  cursor: not-allowed;
+}
+
+.send-spinner {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 5px;
+  height: 5px;
+  background: #888;
+  border-radius: 50%;
+  animation: dotPulse 1.2s infinite;
+}
+
+.spinner-dot:nth-child(2) { animation-delay: 0.2s; }
+.spinner-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.1); }
+}
+
+.chat-input-disclaimer {
+  font-size: 0.72rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.chat-file-input {
+  display: none;
+}
+
+.attach-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.attach-btn:hover:not(:disabled) {
+  background: #222;
+  color: #e0e0e0;
+}
+
+.attach-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.chat-input-dragover {
+  border-color: #6366f1 !important;
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.chat-attachment-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 768px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 10px;
+  color: #f87171;
+  font-size: 0.82rem;
+}
+
+.chat-attachment-error button {
+  background: none;
+  border: none;
+  color: #f87171;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 2px 6px;
+}
+
+.chat-attachments-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 768px;
+  margin-bottom: 0.5rem;
+}
+
+.attachment-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  max-width: 220px;
+  min-width: 0;
+}
+
+.attachment-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.attachment-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attachment-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.attachment-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.attachment-name {
+  font-size: 0.78rem;
+  color: #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attachment-size {
+  font-size: 0.68rem;
+  color: #666;
+}
+
+.attachment-remove {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  transition: all 0.1s;
+}
+
+.attachment-remove:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+}
+
+@media (max-width: 768px) {
+  .attachment-card {
+    max-width: 180px;
+  }
+}

@@ -1,33 +1,25 @@
-# macOS system files
-.DS_Store
-
-# Node.js dependencies
-node_modules/
-
 # Environment variables
 .env
-
-
-# Dependencies
-Backend/node_modules/
-Frontend/node_modules/
-
-# Environment files
+.env.*
+!.env.example
 Backend/.env
 Frontend/.env
 
+# Node.js dependencies
+node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+# Build output
+Frontend/dist/
+
 # Logs
 *.log
+npm-debug.log*
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# Vite build
-Frontend/dist/
-
-# VS Code
+# IDE
 .vscode/
-
-# npm debug
-npm-debug.log*

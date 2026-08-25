@@ -1,0 +1,81 @@
+.code-block {
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d1117;
+  border: 1px solid #1f2937;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #161b22;
+  border-bottom: 1px solid #1f2937;
+}
+
+.code-language {
+  font-size: 0.78rem;
+  color: #8b949e;
+  font-family: "Fira Code", monospace;
+  text-transform: lowercase;
+}
+
+.code-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.code-copy-btn:hover {
+  background: #21262d;
+  color: #e6edf3;
+  border-color: #484f58;
+}
+
+.code-pre {
+  margin: 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background: #0d1117;
+}
+
+.code-pre code {
+  font-family: "Fira Code", "Cascadia Code", "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #e6edf3;
+}
+
+.code-pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.code-pre::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.code-pre::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+.code-block pre code .hljs-keyword { color: #ff7b72; }
+.code-block pre code .hljs-string { color: #a5d6ff; }
+.code-block pre code .hljs-comment { color: #8b949e; }
+.code-block pre code .hljs-function { color: #d2a8ff; }
+.code-block pre code .hljs-number { color: #79c0ff; }
+.code-block pre code .hljs-title { color: #d2a8ff; }
+.code-block pre code .hljs-built_in { color: #ffa657; }
+.code-block pre code .hljs-type { color: #ffa657; }
+.code-block pre code .hljs-attr { color: #79c0ff; }
+.code-block pre code .hljs-variable { color: #ffa657; }

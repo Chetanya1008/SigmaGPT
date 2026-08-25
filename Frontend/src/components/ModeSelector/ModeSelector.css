@@ -1,0 +1,53 @@
+.mode-selector {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #222;
+  border-radius: 20px;
+  background: transparent;
+  color: #777;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.mode-btn:hover {
+  border-color: #333;
+  color: #bbb;
+  background: #141414;
+}
+
+.mode-active {
+  border-color: #6366f1 !important;
+  color: #818cf8 !important;
+  background: rgba(99, 102, 241, 0.08) !important;
+}
+
+.mode-label {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  .mode-selector {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .mode-label {
+    display: none;
+  }
+
+  .mode-btn {
+    padding: 0.4rem 0.6rem;
+  }
+}
